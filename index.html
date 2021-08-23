@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>musicStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="media/My Post (6).png" class="logo">
+            <ul>
+                <li><a href="https://www.musicstores.in/">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="https://www.google.com/maps/place/Music+Stores/@17.4327041,78.3787473,12z/data=!4m8!1m2!2m1!1smusic+stores+near+Hyderabad,+Telangana,+India!3m4!1s0x3bcb915fc6bbffff:0xebdb8d29c0b0fab2!8m2!3d17.4411111!4d78.3925435">LOCATION</a></li>
+                <li><a href="product.html">PRODUCT</a></li>
+                <li><a href="https://www.musicstores.in/contact-us">CONNECT US</a></li>
+                <li><a href="https://www.musicstores.in/login?back=https://www.musicstores.in/brands">LOGIN/SIGNUP</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>Music touches us <br>emotionally,<br> where words alone can’t.</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here to Listen</p>
+                <img src="media/play.png" id="icon">
+            </div>
+            
+                
+    
+    </div>
+        </div>
+        <div style="text-align:center"> 
+            <button onclick="playPause()">Play/Pause</button> 
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <br> 
+            <video id="video1" width="420" height="340" controls>
+                <source src="media/Pehla.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <script> 
+            var myVideo = document.getElementById("video1"); 
+            
+            function playPause() { 
+            if (myVideo.paused) 
+                myVideo.play(); 
+            else 
+                myVideo.pause(); 
+            } 
+            
+            function makeBig() { 
+                myVideo.width = 560; 
+            } 
+            
+            function makeSmall() { 
+                myVideo.width = 320; 
+            } 
+            
+            function makeNormal() { 
+                myVideo.width = 420; 
+            } 
+        </script>
+
+    </div>
+
+    <audio id="mySong">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <source src="media/Ranjha1.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src="media/pause.png";
+            }else{
+                mySong.pause();
+                icon.src="media/play.png";
+
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
